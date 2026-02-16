@@ -1,13 +1,278 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portifolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio Profissional de Paloma Brito - Desenvolvedora de Software">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0d10'/><text x='50' y='65' font-family='serif' font-size='50' fill='%23e0e6ed' text-anchor='middle'>P.B.</text></svg>" type="image/svg+xml">
+    
+    <title>Paloma Brito | Desenvolvedora de Software</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme"> 
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-symbol">P.B.</span>
+            </a>
+            
+            <div class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#portfolio" class="nav-link">Projetos</a></li>
+                    <li><a href="#contact" class="btn-contact">Contato</a></li>
+                </ul>
+
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle">Estética & Lógica</p>
+            <h1 class="hero-title">Paloma Brito</h1>
+            <h2 class="hero-role">Desenvolvedora de Software</h2>
+            <p class="hero-description">
+                Construindo soluções digitais com a precisão de um ministro e a elegância da arquitetura clássica. Unindo Tecnologia e Economia.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Ver Projetos <i class="fas fa-chevron-right"></i></a>
+                <a href="./assets/curriculo-paloma.pdf" target="_blank" class="btn btn-secondary" title="Baixar PDF">
+                    <i class="fas fa-file-pdf"></i> Acessar Dossiê
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Explorar</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h3 class="section-subtitle">A Profissional</h3>
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="about-content-text-only">
+                    <p>
+                        No vasto mundo do desenvolvimento de software, a ordem deve prevalecer sobre o caos. Sou Paloma Brito, dedicada a transformar códigos complexos em experiências de usuário refinadas e funcionais.
+                    </p>
+                    <p>
+                        Minha abordagem combina o rigor técnico da Computação com a visão analítica da Economia. Assim como o Ministro Noiret preza pela estrutura e elegância, eu garanto que cada linha de código sirva a um propósito maior: eficiência e escalabilidade.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-laptop-code stat-icon"></i>
+                            <span class="stat-label">Graduanda em<br>Ciência da Computação</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line stat-icon"></i>
+                            <span class="stat-label">Graduanda em<br>Ciências Econômicas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h3 class="section-subtitle">Domínio Técnico</h3>
+                    <h2 class="section-title">Minhas Ferramentas</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h3>Front-End</h3>
+                        <p>HTML5, CSS3, JavaScript, React, Tailwind CSS. Criação de interfaces imersivas.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server skill-icon"></i>
+                        <h3>Back-End</h3>
+                        <p>Node.js, Java, Python. A lógica oculta que sustenta o sistema.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h3>Banco de Dados</h3>
+                        <p>SQL, MongoDB, PostgreSQL. A organização meticulosa da informação.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-user-secret skill-icon"></i>
+                        <h3>Cibersegurança</h3>
+                        <p>Noções de defesa digital e análise de vulnerabilidades. Proteção além do código.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-mobile-alt skill-icon"></i>
+                        <h3>Mobile & Responsivo</h3>
+                        <p>Adaptação perfeita para qualquer dispositivo ou resolução.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio-section">
+            <div class="container">
+                <div class="section-header">
+                    <h3 class="section-subtitle">Magnum Opus</h3>
+                    <h2 class="section-title">Projetos Acadêmicos & Pessoais</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="portfolio-grid">
+                    
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <div class="placeholder-img bg-dark-1"></div> 
+                        </div>
+                        <div class="card-content">
+                            <h4>Sistema Corporativo AnaLu</h4>
+                            <p class="project-description">
+                                Uma solução robusta para gestão empresarial. Este sistema integra fluxo de caixa e cadastro de clientes com foco na experiência do usuário administrativo.
+                            </p>
+                            <p class="tech-stack">React | Java | PostgreSQL</p>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                             <div class="placeholder-img bg-dark-2"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Controle de EPI</h4>
+                            <p class="project-description">
+                                Interface moderna para controle de segurança do trabalho. Focada em agilidade para o registro de retirada e devolução de equipamentos.
+                            </p>
+                            <p class="tech-stack">React | Java | Tailwind CSS</p>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                             <div class="placeholder-img bg-dark-2"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Sistema Bancário</h4>
+                            <p class="project-description">
+                                Simulação de operações bancárias seguras. Implementação de lógica transacional complexa e integridade de dados financeiros.
+                            </p>
+                            <p class="tech-stack">React | Next.js | PostgreSQL</p>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                             <div class="placeholder-img bg-dark-3"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>App de Gestão Financeira</h4>
+                            <p class="project-description">
+                                Aplicação mobile para controle de gastos pessoais. Sincronização em tempo real e visualização de dados via gráficos.
+                            </p>
+                            <p class="tech-stack">Flutter | Firebase</p>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 class="contact-title">Inicie uma Conversa</h2>
+                        <p>Estou disponível para estágios e projetos que desafiem minha lógica e criatividade.</p>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-envelope"></i> palomabarbosabrito.dev@gmail.com</li>
+                            <li><i class="fab fa-linkedin"></i> linkedin.com/in/palomabrito</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Brasil</li>
+                        </ul>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Seu Nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Seu E-mail</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" "></textarea>
+                            <label for="message">Sua Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Enviar Correspondência</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">P.B.</div>
+                <p>&copy; 2024 Paloma Brito. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
