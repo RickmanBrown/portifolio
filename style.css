@@ -456,31 +456,41 @@ ul { list-style: none; }
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
     border-color: var(--accent-primary);
     box-shadow: var(--shadow-soft);
 }
 
 .card-image-wrapper {
-    height: 200px;
+    height: 200px !important; /* Força a altura exata */
     width: 100%;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--border-glass);
 }
 
-.placeholder-img {
+.placeholder-img img {
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease;
+    background-color: transparent; 
 }
+
+.placeholder-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* A MÁGICA: Impede que a imagem achate, cortando as bordas */
+    object-position: top center !important; /* Garante que o menu superior do seu sistema apareça */
+    display: block;
+
+}
+
+/* Efeito de zoom ao passar o mouse */
+
 
 /* Gradientes abstratos para os projetos (comportam-se bem nos dois temas) */
 .bg-dark-1 { background: linear-gradient(45deg, #2c3e50, #4ca1af); }
 .bg-dark-2 { background: linear-gradient(45deg, #485563, #29323c); }
 .bg-dark-3 { background: linear-gradient(45deg, #0f2027, #2c5364); }
 
-.project-card:hover .placeholder-img { transform: scale(1.05); }
 
 .card-content {
     padding: 25px;
