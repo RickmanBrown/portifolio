@@ -165,12 +165,14 @@
                             <h4>Sistema Corporativo AnaLu</h4>
                             <p class="tech-stack">React | Java | Spring Boot</p>
                             <div class="project-actions">
-                                <a href="https://analuestofados-frontend.vercel.app/" class="btn-project btn-live">Live</a>
-                                <a href="https://github.com/Paloma-B-Brito/analu-sistemaestofados" class="btn-project btn-code">GitHub</a>
+                                <a href="https://analuestofados-frontend.vercel.app/"
+                                    class="btn-project btn-live">Live</a>
+                                <a href="https://github.com/Paloma-B-Brito/analu-sistemaestofados"
+                                    class="btn-project btn-code">GitHub</a>
                             </div>
                         </div>
                     </article>
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -204,7 +206,7 @@
                         </div>
 
                         <button type="submit" id="submit-btn" class="btn btn-submit">Enviar Correspondência</button>
-                        <p id="form-status" style="margin-top: 15px; font-weight: 500;"></p>
+                        <p id="form-status" style="margin-top: 15px; font-weight: 500; min-height: 24px;"></p>
                     </form>
                 </div>
             </div>
@@ -230,46 +232,51 @@
 
     <script>
         const contactForm = document.getElementById('contact-form');
-        const formStatus = document.getElementById('form-status');
-        const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            submitBtn.disabled = true;
-            formStatus.innerText = "Enviando mensagem...";
-            formStatus.style.color = "var(--text-color)";
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Feedback visual imediato
+        submitBtn.disabled = true;
+        formStatus.innerText = "Enviando mensagem...";
+        formStatus.style.color = "#e0e6ed";
 
-            const data = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+        const data = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
 
-            try {
-                const response = await fetch('/api/contact.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
+        try {
+            // Chamada para a API usando caminho relativo padrão
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
 
-                if (response.ok) {
-                    formStatus.innerText = "Mensagem enviada com sucesso! Logo entrarei em contato.";
-                    formStatus.style.color = "#4CAF50";
-                    contactForm.reset();
-                } else {
-                    const errorData = await response.json();
-                    formStatus.innerText = "Ocorreu um erro: " + (errorData.error || "Tente novamente.");
-                    formStatus.style.color = "#FF5252";
-                }
-            } catch (error) {
-                formStatus.innerText = "Erro ao conectar com o servidor.";
+            const result = await response.json();
+
+            if (response.ok) {
+                formStatus.innerText = "Mensagem enviada com sucesso! ✨";
+                formStatus.style.color = "#4CAF50";
+                contactForm.reset();
+            } else {
+                formStatus.innerText = "Erro: " + (result.error || "Tente novamente.");
                 formStatus.style.color = "#FF5252";
-            } finally {
-                submitBtn.disabled = false;
             }
-        });
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            formStatus.innerText = "Erro ao conectar com o servidor. Verifique sua conexão.";
+            formStatus.style.color = "#FF5252";
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
     </script>
 </body>
 
