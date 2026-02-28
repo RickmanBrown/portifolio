@@ -161,19 +161,76 @@
                 </div>
                 <div class="portfolio-grid">
                     <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <div class="placeholder-img bg-dark-1">
+                                <img src="imagens/Sistema estofados.png" alt="Imagem do Projeto AnaLu">
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h4>Sistema Corporativo AnaLu</h4>
-                            <p class="tech-stack">React | Java | Spring Boot</p>
+                            <p class="project-description">
+                                Sistema web para gestão empresarial com controle de caixa, cadastro de clientes e
+                                operações administrativas. Implementação de API REST, modelagem relacional e
+                                persistência com JPA.
+                            </p>
+                            <p class="tech-stack">React | Tailwind CSS | Java | Spring Boot | PostgreSQL</p>
+
                             <div class="project-actions">
-                                <a href="https://analuestofados-frontend.vercel.app/"
-                                    class="btn-project btn-live">Live</a>
+                                <a href="https://analuestofados-frontend.vercel.app/" class="btn-project btn-live"><i
+                                        class="fas fa-eye"></i> Ver ao Vivo</a>
                                 <a href="https://github.com/Paloma-B-Brito/analu-sistemaestofados"
-                                    class="btn-project btn-code">GitHub</a>
+                                    class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <div class="placeholder-img bg-dark-2">
+                                <img src="imagens/SGEPI.png" alt="Imagem do Projeto SGEPI">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Controle de EPI</h4>
+                            <p class="project-description">
+                                Interface moderna para controle de segurança do trabalho. Focada em agilidade para o
+                                registro de retirada e devolução de equipamentos.
+                            </p>
+
+                            <p class="tech-stack">React | Tailwind CSS | Java | Spring Boot</p>
+                            <div class="project-actions">
+                                <a href="https://sgepi-front-end.vercel.app/" class="btn-project btn-live"><i
+                                        class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="https://github.com/Paloma-B-Brito/SGEPI-FRONT-END"
+                                    class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <div class="placeholder-img bg-dark-2"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Sistema Bancário</h4>
+                            <p class="project-description">
+                                Simulação de operações bancárias seguras. Implementação de lógica transacional complexa
+                                e integridade de dados financeiros.
+                            </p>
+                            <p class="tech-stack">React | Tailwind CSS | Java | Spring Boot | PostgreSQL</p>
+
+                            <div class="project-actions">
+                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver ao Vivo</a>
+                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
+            </div>
+        </section>
+        </div>
+        </div>
         </section>
 
         <section id="contact" class="section contact-section">
@@ -232,51 +289,51 @@
 
     <script>
         const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitBtn = document.getElementById('submit-btn');
+        const formStatus = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
 
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Feedback visual imediato
-        submitBtn.disabled = true;
-        formStatus.innerText = "Enviando mensagem...";
-        formStatus.style.color = "#e0e6ed";
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-        const data = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
+            // Feedback visual imediato
+            submitBtn.disabled = true;
+            formStatus.innerText = "Enviando mensagem...";
+            formStatus.style.color = "#e0e6ed";
 
-        try {
-            // Chamada para a API usando caminho relativo padrão
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
 
-            const result = await response.json();
+            try {
+                // Chamada para a API usando caminho relativo padrão
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
 
-            if (response.ok) {
-                formStatus.innerText = "Mensagem enviada com sucesso! ✨";
-                formStatus.style.color = "#4CAF50";
-                contactForm.reset();
-            } else {
-                formStatus.innerText = "Erro: " + (result.error || "Tente novamente.");
+                const result = await response.json();
+
+                if (response.ok) {
+                    formStatus.innerText = "Mensagem enviada com sucesso! ✨";
+                    formStatus.style.color = "#4CAF50";
+                    contactForm.reset();
+                } else {
+                    formStatus.innerText = "Erro: " + (result.error || "Tente novamente.");
+                    formStatus.style.color = "#FF5252";
+                }
+            } catch (error) {
+                console.error("Erro na requisição:", error);
+                formStatus.innerText = "Erro ao conectar com o servidor. Verifique sua conexão.";
                 formStatus.style.color = "#FF5252";
+            } finally {
+                submitBtn.disabled = false;
             }
-        } catch (error) {
-            console.error("Erro na requisição:", error);
-            formStatus.innerText = "Erro ao conectar com o servidor. Verifique sua conexão.";
-            formStatus.style.color = "#FF5252";
-        } finally {
-            submitBtn.disabled = false;
-        }
-    });
+        });
     </script>
 </body>
 

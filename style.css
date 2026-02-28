@@ -40,7 +40,7 @@ body.light-theme {
     --accent-glow: #2c3e50;   /* Azul Noturno (Invertido para destaque) */
     --accent-primary: #5c7c99; /* Azul Aço Mais Forte */
     
-    --border-glass: rgba(0, 0, 0, 0.08); /* Bordas escuras sutis */
+    --border-glass: rgba(0, 0, 0, 0.241); /* Bordas escuras sutis */
     --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     
     --nav-bg: rgba(255, 255, 255, 0.85);
@@ -204,7 +204,7 @@ ul { list-style: none; }
     line-height: 1.1;
     margin-bottom: 10px;
     /* Gradiente adaptável: usa variável para suportar light mode */
-    background: linear-gradient(to bottom, var(--text-main), var(--accent-primary));
+    background: linear-gradient(to bottom, var(--text-main), #09306ab0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -215,7 +215,7 @@ ul { list-style: none; }
     font-weight: 300;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--accent-silver);
+    color: var(#626971);
     margin-bottom: 30px;
 }
 
