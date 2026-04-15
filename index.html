@@ -1,284 +1,319 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio Profissional de Juscelino Borges - Técnico em Enfermagem e Analista de Sistemas">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfólio profissional de Juscelino Borges, desenvolvedor front-end focado em interfaces modernas, acessíveis e funcionais."
+  />
 
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0d10'/><text x='50' y='65' font-family='serif' font-size='50' fill='%23e0e6ed' text-anchor='middle'>J.B.</text></svg>"
-        type="image/svg+xml">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b0d10'/><text x='50' y='62' font-family='serif' font-size='42' fill='%23e0e6ed' text-anchor='middle'>J.B.</text></svg>"
+    type="image/svg+xml" />
 
-    <title>Juscelino Borges | Técnico em Enfermagem & Analista de Sistemas</title>
+  <title>Juscelino Borges | Desenvolvedor Front-End</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;400;500&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="dark-theme">
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-symbol">J.B.</span>
-            </a>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Página inicial">
+        <span class="logo-symbol">J.B.</span>
+      </a>
 
-            <div class="nav-wrapper">
-                <ul class="nav-links">
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#portfolio" class="nav-link">Projetos</a></li>
-                    <li><a href="#contact" class="btn-contact">Contato</a></li>
-                </ul>
+      <div class="nav-wrapper">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#portfolio" class="nav-link">Projetos</a></li>
+          <li><a href="#contact" class="btn-contact">Contato</a></li>
+        </ul>
 
-                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
+          <i class="fas fa-moon"></i>
+        </button>
 
-                <div class="mobile-menu-icon">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
+        <button class="mobile-menu-icon" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="hero-subtitle">Portfólio Profissional</p>
+
+      <h1 class="hero-title">Juscelino Borges</h1>
+
+      <h2 class="hero-role">
+        Desenvolvedor Front-End • Interfaces Modernas • Experiências Digitais
+      </h2>
+
+      <p class="hero-description">
+        Desenvolvo interfaces elegantes, funcionais e intuitivas, unindo design,
+        lógica e organização para criar soluções digitais com impacto real.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary">
+          Ver Projetos <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <a href="#" target="_blank" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i> Currículo
+        </a>
+      </div>
+
+      <div class="hero-highlights">
+        <span><i class="fas fa-code"></i> HTML • CSS • JavaScript</span>
+        <span><i class="fab fa-react"></i> React</span>
+        <span><i class="fas fa-layer-group"></i> UI Moderna</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="mouse">
+        <span class="wheel"></span>
+      </span>
+      <span class="scroll-text">Explorar</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subtitle">Quem Sou Eu</h3>
+          <h2 class="section-title">Sobre Mim</h2>
+          <div class="divider"></div>
         </div>
-    </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <p class="hero-subtitle">Técnico em Enfermagem • Analista de Sistemas</p>
-            <h1 class="hero-title">Juscelino Borges</h1>
-            <h2 class="hero-role">Saúde • Tecnologia • Sistemas Web • Banco de Dados • Suporte e Inovação</h2>
-            <p class="hero-description">
-                Unindo conhecimento em saúde e tecnologia para criar soluções digitais mais humanas, eficientes e inteligentes.
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Sou um profissional da área de tecnologia com formação em
+              <strong>Análise e Desenvolvimento de Sistemas</strong> e
+              interesse em criar experiências digitais modernas, claras e funcionais.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">Ver Projetos <i class="fas fa-chevron-right"></i></a>
-                <a href="#" target="_blank" class="btn btn-secondary" title="Acessar Currículo">
-                    <i class="fas fa-file-alt"></i> Acessar Currículo
-                </a>
+            <p>
+              Tenho afinidade com desenvolvimento web, organização de interfaces,
+              estruturação de páginas e soluções que unem estética, clareza e usabilidade.
+            </p>
+
+            <p>
+              Meu objetivo é construir projetos que transmitam profissionalismo,
+              confiança e eficiência, sempre com atenção aos detalhes visuais
+              e à experiência do usuário.
+            </p>
+          </div>
+
+          <div class="about-cards">
+            <div class="about-card">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Desenvolvimento Web</h3>
+              <p>Criação de interfaces responsivas, modernas e bem estruturadas.</p>
             </div>
+
+            <div class="about-card">
+              <i class="fas fa-palette"></i>
+              <h3>Design & Organização</h3>
+              <p>Layouts com hierarquia visual, elegância e foco em usabilidade.</p>
+            </div>
+
+            <div class="about-card">
+              <i class="fas fa-diagram-project"></i>
+              <h3>Soluções Práticas</h3>
+              <p>Projetos pensados para resolver problemas com clareza e lógica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subtitle">Competências</h3>
+          <h2 class="section-title">Minhas Ferramentas</h2>
+          <div class="divider"></div>
         </div>
 
-        <div class="scroll-indicator">
-            <span class="mouse">
-                <span class="wheel"></span>
-            </span>
-            <span class="scroll-text">Explorar</span>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <i class="fas fa-code skill-icon"></i>
+            <h3>Front-End</h3>
+            <p>HTML • CSS • JavaScript • React • Responsividade</p>
+          </article>
+
+          <article class="skill-card">
+            <i class="fas fa-paint-brush skill-icon"></i>
+            <h3>UI & Layout</h3>
+            <p>Hierarquia visual • Tipografia • Paleta de cores • Experiência visual</p>
+          </article>
+
+          <article class="skill-card">
+            <i class="fas fa-database skill-icon"></i>
+            <h3>Base Técnica</h3>
+            <p>SQL • Modelagem de dados • Estrutura de sistemas • Organização lógica</p>
+          </article>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section id="about" class="section about-section">
-            <div class="container">
-                <div class="section-header">
-                    <h3 class="section-subtitle">O Profissional</h3>
-                    <h2 class="section-title">Sobre Mim</h2>
-                    <div class="divider"></div>
-                </div>
-
-                <div class="about-content-text-only">
-                    <p>
-                        Sou profissional com formação em <strong>Técnico em Enfermagem</strong> e
-                        <strong>Análise e Desenvolvimento de Sistemas</strong>, com interesse em criar pontes entre
-                        cuidado humano, organização de processos e soluções tecnológicas.
-                    </p>
-                    <p>
-                        Minha trajetória une experiência em rotinas da área da saúde com conhecimentos em desenvolvimento
-                        de sistemas, permitindo uma visão prática sobre como a tecnologia pode otimizar atendimentos,
-                        registros, fluxos internos e gestão de informações.
-                    </p>
-                    <p>
-                        Tenho interesse especial por sistemas web, bancos de dados e interfaces intuitivas, buscando
-                        desenvolver aplicações funcionais, acessíveis e voltadas para problemas reais.
-                    </p>
-                    <p>
-                        Acredito que tecnologia de qualidade não é apenas código: é também empatia, organização,
-                        clareza e entendimento das necessidades das pessoas que utilizam cada sistema.
-                    </p>
-
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <i class="fas fa-user-nurse stat-icon"></i>
-                            <span class="stat-label">Formação em<br>Técnico em Enfermagem</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-laptop-code stat-icon"></i>
-                            <span class="stat-label">Formação em<br>Análise e Desenvolvimento de Sistemas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <div class="section-header">
-                    <h3 class="section-subtitle">Competências</h3>
-                    <h2 class="section-title">Minhas Ferramentas</h2>
-                    <div class="divider"></div>
-                </div>
-
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fas fa-heartbeat skill-icon"></i>
-                        <h3>Área da Saúde</h3>
-                        <p>Rotinas clínicas • Atendimento • Organização hospitalar • Registro de informações</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h3>Desenvolvimento</h3>
-                        <p>HTML • CSS • JavaScript • Lógica de Programação • Sistemas Web</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fas fa-database skill-icon"></i>
-                        <h3>Banco de Dados</h3>
-                        <p>SQL • Modelagem de Dados • MySQL • PostgreSQL</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fas fa-desktop skill-icon"></i>
-                        <h3>Suporte & Processos</h3>
-                        <p>Organização de fluxos • Documentação • Suporte técnico • Melhoria operacional</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="section portfolio-section">
-            <div class="container">
-                <div class="section-header">
-                    <h3 class="section-subtitle">Projetos em Destaque</h3>
-                    <h2 class="section-title">Experiência Prática</h2>
-                    <div class="divider"></div>
-                </div>
-
-                <div class="portfolio-grid">
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <div class="placeholder-img bg-dark-1"></div>
-                        </div>
-                        <div class="card-content">
-                            <h4>MedCare Flow</h4>
-                            <p class="project-description">
-                                Plataforma conceitual para organização de atendimentos, controle de pacientes e registro
-                                de informações clínicas. Projeto pensado para otimizar a rotina de pequenas unidades de saúde.
-                            </p>
-                            <p class="tech-stack">HTML | CSS | JavaScript | SQL</p>
-
-                            <div class="project-actions">
-                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
-                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <div class="placeholder-img bg-dark-2"></div>
-                        </div>
-                        <div class="card-content">
-                            <h4>Escala Hospitalar Digital</h4>
-                            <p class="project-description">
-                                Sistema fictício para gerenciamento de escalas de profissionais da saúde, com foco em
-                                organização de turnos, visualização rápida e redução de conflitos operacionais.
-                            </p>
-                            <p class="tech-stack">HTML | CSS | JavaScript | MySQL</p>
-
-                            <div class="project-actions">
-                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
-                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <div class="placeholder-img bg-dark-2"></div>
-                        </div>
-                        <div class="card-content">
-                            <h4>Prontuário Ágil</h4>
-                            <p class="project-description">
-                                Protótipo de sistema para cadastro e consulta rápida de informações de pacientes, com
-                                organização pensada para melhorar a experiência de uso em ambientes com alta demanda.
-                            </p>
-                            <p class="tech-stack">HTML | CSS | JavaScript | PostgreSQL</p>
-
-                            <div class="project-actions">
-                                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
-                                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2 class="contact-title">Entre em Contato</h2>
-                        <p>
-                            Estou disponível para oportunidades profissionais, projetos colaborativos e soluções que conectem saúde e tecnologia.
-                        </p>
-                        <ul class="contact-details">
-                            <li><i class="fas fa-envelope"></i> juscelino.borges.dev@email.com</li>
-                            <li><i class="fab fa-linkedin"></i> linkedin.com/in/juscelino-borges</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Brasil</li>
-                        </ul>
-                    </div>
-
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label>Seu Nome</label>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label>Seu E-mail</label>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="message" name="message" required placeholder=" "></textarea>
-                            <label>Sua Mensagem</label>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="btn btn-submit">Enviar Mensagem</button>
-                        <p id="form-status" style="margin-top: 15px; font-weight: 500; min-height: 24px;"></p>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">J.B.</div>
-                <p>&copy; 2026 Juscelino Borges. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+    <section id="portfolio" class="section portfolio-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subtitle">Projetos em Destaque</h3>
+          <h2 class="section-title">Meu Trabalho</h2>
+          <div class="divider"></div>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+        <div class="portfolio-grid">
+          <article class="project-card">
+            <div class="card-image-wrapper">
+              <div class="placeholder-img bg-dark-1">Projeto 01</div>
+            </div>
+
+            <div class="card-content">
+              <h4>Landing Page Profissional</h4>
+              <p class="project-description">
+                Página moderna com estrutura elegante, foco em apresentação profissional
+                e design responsivo para diferentes dispositivos.
+              </p>
+              <p class="tech-stack">HTML • CSS • JavaScript</p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
+                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image-wrapper">
+              <div class="placeholder-img bg-dark-2">Projeto 02</div>
+            </div>
+
+            <div class="card-content">
+              <h4>Sistema Web de Gestão</h4>
+              <p class="project-description">
+                Interface pensada para organização de informações, navegação clara
+                e melhor experiência visual em aplicações administrativas.
+              </p>
+              <p class="tech-stack">HTML • CSS • JavaScript • React</p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
+                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image-wrapper">
+              <div class="placeholder-img bg-dark-3">Projeto 03</div>
+            </div>
+
+            <div class="card-content">
+              <h4>Portfólio Responsivo</h4>
+              <p class="project-description">
+                Projeto de identidade profissional com visual sofisticado, navegação fluida
+                e seções organizadas para destacar habilidades e projetos.
+              </p>
+              <p class="tech-stack">HTML • CSS • JavaScript</p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project btn-live"><i class="fas fa-eye"></i> Ver Projeto</a>
+                <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2 class="contact-title">Vamos Conversar</h2>
+            <p>
+              Estou disponível para oportunidades, projetos e colaborações.
+              Será um prazer transformar ideias em experiências digitais marcantes.
+            </p>
+
+            <ul class="contact-details">
+              <li><i class="fas fa-envelope"></i> juscelino.borges.dev@email.com</li>
+              <li><i class="fab fa-linkedin"></i> linkedin.com/in/juscelino-borges</li>
+              <li><i class="fab fa-github"></i> github.com/juscelinoborges</li>
+              <li><i class="fas fa-map-marker-alt"></i> Brasil</li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Seu nome</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Seu e-mail</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" required placeholder=" "></textarea>
+              <label for="message">Sua mensagem</label>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-submit">
+              Enviar Mensagem
+            </button>
+
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">J.B.</div>
+        <p>&copy; 2026 Juscelino Borges. Todos os direitos reservados.</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
